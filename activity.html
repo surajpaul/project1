@@ -44,7 +44,7 @@
 				<div class="col-md-7 mr-0 pr-0" align="center">
 					<p class="pt-3">
 						<span class="pr-3 text-dark call-text"><img class="mr-2" src="img/svg/phone-call.svg" width="25px"><a class="text-dark" href="callto:+91-9873317191">+91-9873317191</a></span>
-						<a href="register.html"><button class="btn violet-btn mt-0">Register Now</button></a>
+						<a href="register.html"><button class="btn violet-btn mt-0">Volunteer With Us</button></a>
 					</p>
 				</div>
 				<div class="col-md-12 p-5 min-media-pad-banner" style="background: #d8ba84;">
@@ -148,13 +148,14 @@
 											<div class="p-4 border justify" style="font-size: 14px;background: #fff;">
                                             The society has established and is successfully running the following schools and is providing Quality Education to the children of Rural and semi Urban areas of Delhi.
                                             <div class="row pt-4">
-                                            	<div class="col-md-6 col-12 pb-3">
+                                            	<div class="col-md-12 col-12 pb-3">
                                             		1. SCHOLARS HOME INTERNATIONAL SCHOOL<br>B-999, PH - IV, BANDH ROAD, AYA NAGAR,<br>NEW DELHI- 49
                                             	</div>
-                                            	<div class="col-md-6 col-12 pb-3">
+                                            	<img src="img/Untitled-1.jpg" class="pb-3" width="100%">
+                                            	<div class="col-md-12 col-12 pb-3">
                                             		2. IDS HOME INTERNATIONAL SCHOOL<br>B-7/164, PH - IV, BANDH ROAD, AYA NAGAR,<br>NEW DELHI -49
                                             	</div>
-                                            	<div class="col-md-6 col-12 pb-3">
+                                            	<div class="col-md-12 col-12 pb-3">
                                             		3. KIDS HOME SCHOOL<br>C-627, JVTS GARDEN, Chattarpur Extn,<br>NEW DELHI- 110074
                                             	</div>
                                             </div>
@@ -177,7 +178,7 @@
 									<div class="row" style="margin-top: -30px;">
 										<div class="col-md-12">
 											<p class="p-4 border justify" style="font-size: 14px;background: #fff;">
-                                            1.	The Society has focused on Quality Education to the children and their overall development to become a good citizen for tomorrow.<br>
+                                            1.	The society has focused on Quality Education for the children towards becoming good citizen for tomorrow.<br>
 											2.	Majority of the office bearers  of the society are women and educationists.<br>
 											3.	85% of employees of the society are women.<br>
 											4.	The society has conducted seminar and workshops on empowerment of women and children in  the nearby areas.
@@ -265,7 +266,7 @@
 								<p class="font-30 pt-2 bold"> <a class="text-dark" href="callto:+91-9873317191">+91-9873317191</a></p>
 							</div>
 							<div class="col-md-6 col-12 delay-6 media-center" align="right">
-								<a href="register.html"><button class="btn violet-btn mt-0">Register Now</button></a>
+								<a href="register.html"><button class="btn violet-btn mt-0">Volunteer With Us</button></a>
 							</div>
 						</div>
 					</div>
@@ -320,7 +321,7 @@
 
 <section class="">
 	<!-- our team -->
-	<section class="container pb-5">
+	<section class="container pb-5 d-none">
 		<h3 align="center" class="pb-5" id="skill_india">Our Activities</h3>
 		<div class="row">
 			<div class="col-md-1">
@@ -354,7 +355,7 @@
 						<div class="row" style="margin-top: -50px;">
 							<div class="col-md-12">
 								<p class="p-4 border justify" style="font-size: 14px;background: #fff;">
-									1.	The Society has focused on Quality Education to the children and their overall development to become a good citizen for tomorrow.<br>
+									1.	The society has focused on Quality Education for the children towards becoming good citizen for tomorrow.<br>
 									2.	Majority of the office bearers  of the society are women and educationists.<br>
 									3.	85% of employees of the society are women.<br>
 									4.	The society has conducted seminar and workshops on empowerment of women and children in  the nearby areas.
@@ -413,5 +414,14 @@
 	<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
 	<script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(window).on('load',function(){
+        var mod = $(location).attr('href');
+        var n = mod.split('#');
+        var modalid = '#'+n[1];
+        
+        $(modalid).tab('show');
+    });
+</script>
 </body>
 </html>
