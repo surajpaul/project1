@@ -15,42 +15,27 @@
 </head>
 <body>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<a href="detail.html#tabone">
-					tab 1
-				</a>
-			</div>
-			<div class="col-md-4">
-				<a href="detail.html#tabtwo">
-					tab 2
-				</a>
-			</div>
-			<div class="col-md-4">
-				<a href="detail.html#tabthree">
-					tab 3
-				</a>
-			</div>
-		</div>
-	</div>
+<div>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#tabone" aria-controls="tabone" role="tab" data-toggle="tab">Tab One</a></li>
+    <li role="presentation"><a href="#tabtwo" aria-controls="tabtwo" role="tab" data-toggle="tab">Tab Two</a></li>
+    <li role="presentation"><a href="#tabthree" aria-controls="tabthree" role="tab" data-toggle="tab">Tab Three</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="tabone">tab 1</div>
+    <div role="tabpanel" class="tab-pane" id="tabtwo">tab 2</div>
+    <div role="tabpanel" class="tab-pane" id="tabthree">tab 3</div>
+  </div>
+</div>
 
 
 <script
   src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
-<script>
-var url = document.location.toString();
-if (url.match('#')) {
-    $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
-} 
-
-// Change hash for page-reload
-$('.nav-tabs a').on('shown', function (e) {
-    window.location.hash = e.target.hash;
-})
-</script>
 
 	<!-- JQuery -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
@@ -61,6 +46,15 @@ $('.nav-tabs a').on('shown', function (e) {
 	<script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 
-
+<script>
+	$(function(){
+		if ( location.hash) {
+			$("a[href="+location.hash+"]").click();
+		} else {
+			$("#tabs a:first").click();
+		}
+		
+	});
+</script>
 </body>
 </html>
